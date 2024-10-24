@@ -21,17 +21,16 @@
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
-        thm: homerow_mods {
+
+        thm: tap_homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <125>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
     };
-
-
 
     keymap {
         compatible = "zmk,keymap";
@@ -48,19 +47,19 @@
             bindings = <
 &kp CAPSLOCK  &kp N1       &kp N2       &kp N3        &kp N4         &kp N5                              &kp N6     &kp N7         &kp N8        &kp N9       &kp N0          &kp MINUS
 &kp TAB       &kp Q        &kp W        &kp E         &kp R          &kp T                               &kp Y      &kp U          &kp I         &kp O        &kp P           &kp BACKSLASH
-&kp ESCAPE    &bhm LGUI A  &bhm LALT S  &bhm LCTRL D  &bhm LSHIFT F  &kp G                               &kp H      &bhm RSHIFT J  &bhm RCTRL K  &bhm RALT L  &bhm RGUI SEMI  &kp SINGLE_QUOTE
-&kp GRAVE     &kp Z        &kp X        &kp C         &kp V          &kp B   &trans           &trans     &kp N      &kp M          &kp COMMA     &kp DOT      &kp FSLH        &kp RSHFT
+&kp ESCAPE    &thm LGUI A  &thm LALT S  &thm LCTRL D  &thm LSHIFT F  &kp G                               &kp H      &thm RSHIFT J  &thm RCTRL K  &thm RALT L  &thm RGUI SEMI  &kp SINGLE_QUOTE
+&kp GRAVE     &kp Z        &kp X        &kp C         &kp V          &kp B   &kp PERCENT      &trans     &kp N      &kp M          &kp COMMA     &kp DOT      &kp FSLH        &kp RSHFT
                                         &mo 4         &mo 2          &mo 1   &kp BACKSPACE    &kp SPACE  &kp ENTER  &mo 3          &trans
             >;
         };
 
         symbols {
             bindings = <
-&trans    &trans    &trans     &trans     &trans     &trans                                      &kp SEMI       &kp COMMA      &kp LS(LPAR)   &kp LS(RPAR)  &kp GRAVE     &kp LS(PIPE)
-&trans    &kp LGUI  &kp LALT   &kp LCTRL  &kp RSHFT  &kp SEMI                                    &kp LS(EXCL)   &kp LS(LBRC)   &kp SQT        &kp LS(DQT)   &kp LS(RBRC)  &kp LS(QMARK)
-&kp CAPS  &kp RET   &kp SPACE  &kp TAB    &kp BSPC   &kp DOT                                     &kp LS(POUND)  &kp LS(CARET)  &kp LS(UNDER)  &kp EQUAL     &kp LS(DLLR)  &kp STAR
-&trans    &trans    &trans     &kp BSPC   &kp DEL    &kp LS(PRCNT)  &kp LS(AT)    &kp LS(PRCNT)  &kp LS(TILDE)  &kp LS(LT)     &kp MINUS      &kp LS(PIPE)  &kp LS(GT)    &kp FSLH
-                               &trans     &trans     &trans         &trans        &kp LS(COLON)  &kp LS(PLUS)   &kp LBKT       &kp RBKT
+&trans    &trans    &trans     &trans     &trans     &trans                                  &kp SEMI   &kp COMMA       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp GRAVE         &kp PIPE
+&trans    &kp LGUI  &kp LALT   &kp LCTRL  &kp RSHFT  &kp SEMI                                &kp EXCL   &kp LEFT_BRACE  &kp SQT               &kp DOUBLE_QUOTES      &kp RIGHT_BRACE   &kp QUESTION
+&kp CAPS  &kp RET   &kp SPACE  &kp TAB    &kp BSPC   &kp DOT                                 &kp HASH   &kp CARET       &kp UNDERSCORE        &kp EQUAL              &kp DOLLAR        &kp STAR
+&trans    &trans    &trans     &kp BSPC   &kp DEL    &kp AT    &kp PERCENT    &kp AMPERSAND  &kp TILDE  &kp LESS_THAN   &kp MINUS             &kp PIPE               &kp GREATER_THAN  &kp FSLH
+                               &trans     &trans     &trans    &trans         &kp COLON      &kp PLUS   &kp LBKT        &kp RBKT
             >;
         };
 
