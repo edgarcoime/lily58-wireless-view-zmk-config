@@ -25,7 +25,7 @@
         thm: tap_homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <140>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -45,21 +45,21 @@
 
             display-name = "Base";
             bindings = <
-&kp CAPSLOCK  &kp N1       &kp N2       &kp N3        &kp N4         &kp N5                              &kp N6     &kp N7         &kp N8        &kp N9       &kp N0          &kp MINUS
-&kp TAB       &kp Q        &kp W        &kp E         &kp R          &kp T                               &kp Y      &kp U          &kp I         &kp O        &kp P           &kp BACKSLASH
-&kp ESCAPE    &thm LGUI A  &thm LALT S  &thm LCTRL D  &thm LSHIFT F  &kp G                               &kp H      &thm RSHIFT J  &thm RCTRL K  &thm RALT L  &thm RGUI SEMI  &kp SINGLE_QUOTE
-&kp GRAVE     &kp Z        &kp X        &kp C         &kp V          &kp B   &kp PERCENT      &trans     &kp N      &kp M          &kp COMMA     &kp DOT      &kp FSLH        &kp RSHFT
-                                        &mo 4         &mo 2          &mo 1   &kp BACKSPACE    &kp SPACE  &kp ENTER  &mo 3          &trans
+&kp CAPSLOCK              &kp N1       &kp N2       &kp N3        &kp N4         &kp N5                              &kp N6     &kp N7         &kp N8        &kp N9       &kp N0          &kp MINUS
+&kp TAB                   &kp Q        &kp W        &kp E         &kp R          &kp T                               &kp Y      &kp U          &kp I         &kp O        &kp P           &kp BACKSLASH
+&thm LEFT_CONTROL ESCAPE  &thm LGUI A  &thm LALT S  &thm LCTRL D  &thm LSHIFT F  &kp G                               &kp H      &thm RSHIFT J  &thm RCTRL K  &thm RALT L  &thm RGUI SEMI  &kp SINGLE_QUOTE
+&kp GRAVE                 &kp Z        &kp X        &kp C         &kp V          &kp B   &kp PERCENT      &kp AT     &kp N      &kp M          &kp COMMA     &kp DOT      &kp FSLH        &kp RSHFT
+                                                    &mo 4         &mo 2          &mo 1   &kp BACKSPACE    &kp SPACE  &kp ENTER  &mo 3          &kp TILDE
             >;
         };
 
         symbols {
             bindings = <
-&trans    &trans    &trans     &trans     &trans     &trans                                  &kp SEMI   &kp COMMA       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp GRAVE         &kp PIPE
-&trans    &kp LGUI  &kp LALT   &kp LCTRL  &kp RSHFT  &kp SEMI                                &kp EXCL   &kp LEFT_BRACE  &kp SQT               &kp DOUBLE_QUOTES      &kp RIGHT_BRACE   &kp QUESTION
-&kp CAPS  &kp RET   &kp SPACE  &kp TAB    &kp BSPC   &kp DOT                                 &kp HASH   &kp CARET       &kp UNDERSCORE        &kp EQUAL              &kp DOLLAR        &kp STAR
-&trans    &trans    &trans     &kp BSPC   &kp DEL    &kp AT    &kp PERCENT    &kp AMPERSAND  &kp TILDE  &kp LESS_THAN   &kp MINUS             &kp PIPE               &kp GREATER_THAN  &kp FSLH
-                               &trans     &trans     &trans    &trans         &kp COLON      &kp PLUS   &kp LBKT        &kp RBKT
+&trans    &trans    &trans     &trans     &trans     &trans                              &kp SEMI       &kp COMMA       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp GRAVE         &kp PIPE
+&trans    &kp LGUI  &kp LALT   &kp LCTRL  &kp RSHFT  &kp SEMI                            &kp EXCL       &kp LEFT_BRACE  &kp SQT               &kp DOUBLE_QUOTES      &kp RIGHT_BRACE   &kp QUESTION
+&kp CAPS  &kp RET   &kp SPACE  &kp TAB    &kp BSPC   &kp DOT                             &kp HASH       &kp CARET       &kp UNDERSCORE        &kp EQUAL              &kp DOLLAR        &kp STAR
+&trans    &trans    &trans     &kp BSPC   &kp DEL    &kp AT    &kp PERCENT    &kp AT     &kp PLUS       &kp LESS_THAN   &kp MINUS             &kp PIPE               &kp GREATER_THAN  &kp FSLH
+                               &trans     &trans     &trans    &trans         &kp COLON  &kp AMPERSAND  &kp LBKT        &kp RBKT
             >;
         };
 
