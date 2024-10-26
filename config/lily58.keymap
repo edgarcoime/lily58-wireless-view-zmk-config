@@ -21,6 +21,13 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
+        caps_repeat: caps_repeat {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CAPS_REPEAT";
+            #binding-cells = <0>;
+            bindings = <&key_repeat>, <&caps_word>;
+        };
     };
 
     keymap {
@@ -36,21 +43,21 @@
 
             display-name = "Base";
             bindings = <
-&kp CAPSLOCK             &kp N1       &kp N2       &kp N3        &kp N4         &kp N5                              &kp N6     &kp N7         &kp N8        &kp N9       &kp N0          &kp MINUS
-&kp TAB                  &kp Q        &kp W        &kp E         &kp R          &kp T                               &kp Y      &kp U          &kp I         &kp O        &kp P           &kp BACKSLASH
-&mt LEFT_CONTROL ESCAPE  &thm LGUI A  &thm LALT S  &thm LCTRL D  &thm LSHIFT F  &kp G                               &kp H      &thm RSHIFT J  &thm RCTRL K  &thm RALT L  &thm RGUI SEMI  &kp SINGLE_QUOTE
-&kp GRAVE                &kp Z        &kp X        &kp C         &kp V          &kp B   &kp PERCENT      &kp AT     &kp N      &kp M          &kp COMMA     &kp DOT      &kp FSLH        &kp TILDE
-                                                   &mo 4         &mo 2          &mo 1   &kp BACKSPACE    &kp SPACE  &kp ENTER  &mo 3          &mo 5
+&caps_word               &kp N1       &kp N2       &kp N3        &kp N4            &kp N5                                   &kp N6     &kp N7           &kp N8        &kp N9       &kp N0          &key_repeat
+&kp TAB                  &kp Q        &kp W        &kp E         &kp R             &kp T                                    &kp Y      &kp U            &kp I         &kp O        &kp P           &kp BACKSLASH
+&mt LEFT_CONTROL ESCAPE  &thm LGUI A  &thm LALT S  &thm LCTRL D  &thm LSHIFT F     &kp G                                    &kp H      &thm RSHIFT J    &thm RCTRL K  &thm RALT L  &thm RGUI SEMI  &kp SINGLE_QUOTE
+&kp GRAVE                &kp Z        &kp X        &kp C         &kp V             &kp B        &kp PERCENT      &kp AT     &kp N      &kp M            &kp COMMA     &kp DOT      &kp FSLH        &kp TILDE
+                                                   &mo 4         &lt 2 UNDERSCORE  &lt 1 MINUS  &kp BACKSPACE    &kp SPACE  &kp ENTER  &lt 3 AMPERSAND  &mo 5
             >;
         };
 
         symbols {
             bindings = <
-&trans    &trans    &trans     &trans     &trans     &trans                              &kp SEMI       &kp COMMA       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp GRAVE         &kp PIPE
-&trans    &kp LGUI  &kp LALT   &kp LCTRL  &kp RSHFT  &kp SEMI                            &kp EXCL       &kp LEFT_BRACE  &kp SQT               &kp DOUBLE_QUOTES      &kp RIGHT_BRACE   &kp QUESTION
-&kp CAPS  &kp RET   &kp SPACE  &kp TAB    &kp BSPC   &kp DOT                             &kp HASH       &kp CARET       &kp UNDERSCORE        &kp EQUAL              &kp DOLLAR        &kp STAR
-&trans    &trans    &trans     &kp BSPC   &kp DEL    &kp AT    &kp PERCENT    &kp AT     &kp PLUS       &kp LESS_THAN   &kp MINUS             &kp PIPE               &kp GREATER_THAN  &kp FSLH
-                               &trans     &trans     &trans    &trans         &kp COLON  &kp AMPERSAND  &kp LBKT        &kp RBKT
+&trans    &trans    &trans     &trans     &trans     &trans                                &kp SEMI          &kp COMMA          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp GRAVE         &trans
+&trans    &kp LGUI  &kp LALT   &kp LCTRL  &kp RSHFT  &kp SEMI                              &kp EXCL          &kp LEFT_BRACE     &kp SQT               &kp DOUBLE_QUOTES      &kp RIGHT_BRACE   &kp QUESTION
+&kp CAPS  &kp RET   &kp SPACE  &kp TAB    &kp BSPC   &kp COMMA                             &kp HASH          &kp CARET          &kp UNDERSCORE        &kp EQUAL              &kp DOLLAR        &kp STAR
+&trans    &trans    &trans     &kp BSPC   &kp DEL    &kp PERIOD  &kp PERCENT    &kp AT     &kp PLUS          &kp LESS_THAN      &kp MINUS             &kp PIPE               &kp GREATER_THAN  &kp FSLH
+                               &trans     &trans     &trans      &trans         &kp COLON  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp AMPERSAND
             >;
         };
 
