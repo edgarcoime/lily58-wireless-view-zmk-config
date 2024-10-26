@@ -48,6 +48,8 @@
             label = "STICKY_CAPSWORD";
             #binding-cells = <0>;
             bindings = <&sk LSHIFT>, <&caps_word>;
+
+            tapping-term-ms = <200>;
         };
 
         super_shift: super_shift {
@@ -58,6 +60,8 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "balanced";
+            quick-tap-ms = <200>;
+            retro-tap;
         };
 
         td_space_ctrl: td_space_ctrl {
@@ -66,6 +70,7 @@
             tapping-term-ms = <200>;
             bindings = <&kp SPACE>, <&kp LCTRL>;
         };
+
         htd_kp_space_ctrl: htd_kp_space_ctrl {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -73,6 +78,7 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
             bindings = <&kp>, <&td_space_ctrl>;
+
             hold-trigger-key-positions = <KB_THUMBS KB_RIGHT>;
             retro-tap;
         };
@@ -112,8 +118,8 @@
 &kp TILDE                &kp N1             &kp N2           &kp N3               &kp N4           &kp N5                                                   &kp N6  &kp N7            &kp N8                &kp N9            &kp N0                      &key_repeat
 &kp TAB                  &kp Q              &kp W            &kp E                &kp R            &kp T                                                    &kp Y   &kp U             &kp I                 &kp O             &kp P                       &kp BSLH
 &mt LEFT_CONTROL ESCAPE  &thm LEFT_SHIFT A  &thm LEFT_ALT S  &thm LEFT_CONTROL D  &thm LEFT_GUI F  &kp G                                                    &kp H   &thm RIGHT_GUI J  &thm RIGHT_CONTROL K  &thm RIGHT_ALT L  &thm RIGHT_SHIFT SEMICOLON  &kp SQT
-&kb_settings 5 GRAVE     &kp Z              &kp X            &kp C                &kp V            &kp B                      &kp PERCENT    &kp AMPERSAND  &kp N   &kp M             &kp COMMA             &kp DOT           &kp FSLH                    &kb_settings 5 TILDE
-                                                             &trans               &trans           &super_shift LEFT_SHIFT 0  &kp BSPC       &kp SPACE      &to 1   &trans            &trans
+&kb_settings 5 GRAVE     &kp Z              &kp X            &kp C                &kp V            &kp B                      &kp PERCENT    &kp AMPERSAND  &kp N   &kp M             &kp COMMA             &kp DOT           &kp FSLH                    &kb_settings 5 MINUS
+                                                             &trans               &trans           &super_shift LEFT_SHIFT 0  &kp BSPC       &kp SPACE      &to 1   &tog 2            &trans
             >;
 
             label = "Base";
