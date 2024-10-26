@@ -28,8 +28,9 @@
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <125>;
+            tapping-term-ms = <100>;
             hold-while-undecided;
+            retro-tap;
         };
     };
 
@@ -66,11 +67,11 @@
 
         numpad {
             bindings = <
-&trans  &trans    &trans     &trans     &trans     &trans                    &trans   &kp KP_NUMLOCK  &kp FSLH  &kp STAR  &kp MINUS  &trans
-&trans  &kp LGUI  &kp LALT   &kp LCTRL  &kp RSHFT  &trans                    &trans   &kp N7          &kp N8    &kp N9    &kp PLUS   &trans
-&trans  &kp RET   &kp SPACE  &kp TAB    &kp BSPC   &trans                    &trans   &kp N4          &kp N5    &kp N6    &kp PLUS   &trans
-&trans  &trans    &trans     &kp BSPC   &kp DEL    &trans  &trans    &trans  &trans   &kp N1          &kp N2    &kp N3    &kp RET    &trans
-                             &trans     &trans     &trans  &trans    &kp N0  &kp DOT  &trans          &kp RET
+&trans  &trans    &trans     &trans     &trans     &trans                        &trans   &kp KP_NUMLOCK  &kp FSLH  &kp STAR  &kp MINUS  &trans
+&trans  &kp LGUI  &kp LALT   &kp LCTRL  &kp RSHFT  &kp SEMI                      &trans   &kp N7          &kp N8    &kp N9    &kp PLUS   &trans
+&trans  &kp RET   &kp SPACE  &kp TAB    &kp BSPC   &kp COMMA                     &trans   &kp N4          &kp N5    &kp N6    &kp PLUS   &trans
+&trans  &trans    &trans     &kp BSPC   &kp DEL    &kp PERIOD  &trans    &trans  &trans   &kp N1          &kp N2    &kp N3    &kp RET    &trans
+                             &trans     &trans     &trans      &trans    &kp N0  &kp DOT  &trans          &kp RET
             >;
         };
 
