@@ -91,7 +91,8 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
             flavor = "tap-preferred";
-            retro-tap;
+            hold-while-undecided-linger;
+            hold-while-undecided;
         };
 
         super_layer2: super_layer2 {
@@ -103,7 +104,8 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
             flavor = "tap-preferred";
-            retro-tap;
+            hold-while-undecided;
+            hold-while-undecided-linger;
         };
     };
 
