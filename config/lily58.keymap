@@ -57,11 +57,11 @@
 
         symbols {
             bindings = <
-&trans    &trans    &trans     &trans     &trans     &trans                                &kp SEMI          &kp COMMA          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp GRAVE         &trans
-&trans    &kp LGUI  &kp LALT   &kp LCTRL  &kp RSHFT  &kp SEMI                              &kp EXCL          &kp LEFT_BRACE     &kp SQT               &kp DOUBLE_QUOTES      &kp RIGHT_BRACE   &kp QUESTION
-&kp CAPS  &kp RET   &kp SPACE  &kp TAB    &kp BSPC   &kp COMMA                             &kp HASH          &kp CARET          &kp UNDERSCORE        &kp EQUAL              &kp DOLLAR        &kp STAR
-&trans    &trans    &trans     &kp BSPC   &kp DEL    &kp PERIOD  &kp PERCENT    &kp AT     &kp PLUS          &kp LESS_THAN      &kp MINUS             &kp PIPE               &kp GREATER_THAN  &kp FSLH
-                               &trans     &trans     &trans      &trans         &kp COLON  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp AMPERSAND
+&trans    &trans    &trans     &trans     &trans     &trans                                &kp SEMI          &kp COMMA       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp GRAVE         &trans
+&trans    &kp LGUI  &kp LALT   &kp LCTRL  &kp RSHFT  &kp SEMI                              &kp EXCL          &kp LEFT_BRACE  &kp SQT               &kp DOUBLE_QUOTES      &kp RIGHT_BRACE   &kp QUESTION
+&kp CAPS  &kp RET   &kp SPACE  &kp TAB    &kp BSPC   &kp COMMA                             &kp HASH          &kp CARET       &kp UNDERSCORE        &kp EQUAL              &kp DOLLAR        &kp STAR
+&trans    &trans    &trans     &kp BSPC   &kp DEL    &kp PERIOD  &kp PERCENT    &kp AT     &kp PLUS          &kp LESS_THAN   &kp MINUS             &kp PIPE               &kp GREATER_THAN  &kp FSLH
+                               &trans     &trans     &trans      &trans         &kp COLON  &kp LEFT_BRACKET  &kp AMPERSAND   &kp RIGHT_BRACKET
             >;
         };
 
