@@ -32,6 +32,16 @@
             hold-while-undecided;
             retro-tap;
         };
+
+        kb_settings: kb_settings {
+            compatible = "zmk,behavior-hold-tap";
+            label = "KB_SETTINGS";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <800>;
+            flavor = "tap-preferred";
+        };
     };
 
     keymap {
@@ -50,8 +60,8 @@
 &caps_word               &kp N1       &kp N2       &kp N3        &kp N4               &kp N5                                                &kp N6     &kp N7                   &kp N8        &kp N9       &kp N0          &key_repeat
 &kp TAB                  &kp Q        &kp W        &kp E         &kp R                &kp T                                                 &kp Y      &kp U                    &kp I         &kp O        &kp P           &kp BACKSLASH
 &mt LEFT_CONTROL ESCAPE  &thm LGUI A  &thm LALT S  &thm LCTRL D  &thm LSHIFT F        &kp G                                                 &kp H      &thm RSHIFT J            &thm RCTRL K  &thm RALT L  &thm RGUI SEMI  &kp SINGLE_QUOTE
-&kp GRAVE                &kp Z        &kp X        &kp C         &kp V                &kp B                     &kp PERCENT      &kp AT     &kp N      &kp M                    &kp COMMA     &kp DOT      &kp FSLH        &kp TILDE
-                                                   &mo 4         &layer_hold 2 MINUS  &layer_hold 1 UNDERSCORE  &kp BACKSPACE    &kp SPACE  &kp ENTER  &layer_hold 3 AMPERSAND  &mo 5
+&kb_settings 5 GRAVE     &kp Z        &kp X        &kp C         &kp V                &kp B                     &kp PERCENT      &kp AT     &kp N      &kp M                    &kp COMMA     &kp DOT      &kp FSLH        &kb_settings 5 TILDE
+                                                   &trans        &layer_hold 2 MINUS  &layer_hold 1 UNDERSCORE  &kp BACKSPACE    &kp SPACE  &kp ENTER  &layer_hold 3 AMPERSAND  &trans
             >;
         };
 
@@ -85,23 +95,23 @@
             >;
         };
 
-        config1 {
+        layer_4 {
             bindings = <
-&bt BT_CLR      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                              &none       &none  &none  &none  &none  &none
-&bt BT_CLR_ALL  &bt BT_PRV    &bt BT_NXT    &none         &none         &none                                     &none       &none  &none  &none  &none  &none
-&none           &none         &none         &none         &none         &none                                     &none       &none  &none  &none  &none  &none
-&soft_off       &none         &none         &none         &none         &sys_reset    &bootloader    &bootloader  &sys_reset  &none  &none  &none  &none  &none
-                                            &none         &none         &none         &none          &none        &none       &none  &none
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
             >;
         };
 
-        config2 {
+        keyboard_settings {
             bindings = <
-&none  &none  &none  &none  &none  &none                                   &none       &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none                                   &none       &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none                                   &none       &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &sys_reset  &bootloader    &bootloader  &sys_reset  &none  &none  &none  &none  &none
-                     &none  &none  &none       &none          &none        &none       &none  &none
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                &none       &none  &none      &none  &none  &none
+&none       &bt BT_PRV    &bt BT_NXT    &none         &none         &bt BT_CLR_ALL                              &none       &none  &none      &none  &none  &none
+&none       &none         &none         &none         &none         &none                                       &none       &none  &none      &none  &none  &none
+&trans      &none         &none         &none         &none         &none           &none          &none        &none       &none  &none      &none  &none  &trans
+                                        &soft_off     &none         &sys_reset      &bootloader    &bootloader  &sys_reset  &none  &soft_off
             >;
         };
     };
