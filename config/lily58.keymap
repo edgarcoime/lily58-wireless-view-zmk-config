@@ -16,7 +16,7 @@
         thm: tap_homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <185>;
+            tapping-term-ms = <190>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -73,7 +73,17 @@
         combo_delete {
             bindings = <&kp DELETE>;
             key-positions = <40 39>;
-            layers = <0 1>;
+            layers = <0 1 2>;
+        };
+
+        combo_copy {
+            bindings = <&kp RG(C)>;
+            key-positions = <2 3>;
+        };
+
+        combo_paste {
+            bindings = <&kp RG(V)>;
+            key-positions = <3 4>;
         };
     };
 
@@ -82,11 +92,11 @@
 
         default_layer {
             bindings = <
-&caps_word               &kp N1             &kp N2           &kp N3               &kp N4           &kp N5                                            &kp N6  &kp N7            &kp N8                &kp N9            &kp N0                      &key_repeat
-&kp TAB                  &kp Q              &kp W            &kp E                &kp R            &kp T                                             &kp Y   &kp U             &kp I                 &kp O             &kp P                       &kp BSLH
-&mt LEFT_CONTROL ESCAPE  &thm LEFT_SHIFT A  &thm LEFT_ALT S  &thm LEFT_CONTROL D  &thm LEFT_GUI F  &kp G                                             &kp H   &thm RIGHT_GUI J  &thm RIGHT_CONTROL K  &thm RIGHT_ALT L  &thm RIGHT_SHIFT SEMICOLON  &kp SQT
-&kb_settings 5 GRAVE     &kp Z              &kp X            &kp C                &kp V            &kp B                      &trans      &trans     &kp N   &kp M             &kp COMMA             &kp DOT           &kp FSLH                    &kb_settings 5 TILDE
-                                                             &trans               &trans           &super_shift LEFT_SHIFT 0  &kp BSPC    &kp SPACE  &to 1   &trans            &trans
+&kp TILDE                &kp N1             &kp N2           &kp N3               &kp N4           &kp N5                                                   &kp N6  &kp N7            &kp N8                &kp N9            &kp N0                      &key_repeat
+&kp TAB                  &kp Q              &kp W            &kp E                &kp R            &kp T                                                    &kp Y   &kp U             &kp I                 &kp O             &kp P                       &kp BSLH
+&mt LEFT_CONTROL ESCAPE  &thm LEFT_SHIFT A  &thm LEFT_ALT S  &thm LEFT_CONTROL D  &thm LEFT_GUI F  &kp G                                                    &kp H   &thm RIGHT_GUI J  &thm RIGHT_CONTROL K  &thm RIGHT_ALT L  &thm RIGHT_SHIFT SEMICOLON  &kp SQT
+&kb_settings 5 GRAVE     &kp Z              &kp X            &kp C                &kp V            &kp B                      &kp PERCENT    &kp AMPERSAND  &kp N   &kp M             &kp COMMA             &kp DOT           &kp FSLH                    &kb_settings 5 TILDE
+                                                             &trans               &trans           &super_shift LEFT_SHIFT 0  &kp BSPC       &kp SPACE      &to 1   &trans            &trans
             >;
 
             label = "Base";
@@ -94,11 +104,11 @@
 
         symbols {
             bindings = <
-&trans  &trans          &trans     &trans     &trans        &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LEFT_SHIFT  &kp LALT   &kp LCTRL  &kp LEFT_GUI  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp RET         &kp SPACE  &kp TAB    &kp BSPC      &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans          &trans     &trans     &trans        &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                   &trans     &trans        &trans  &to 0     &trans  &to 2   &trans  &trans
+&trans        &trans          &trans     &trans     &trans        &trans                                    &kp SEMI   &kp COMMA       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp GRAVE         &kp AT
+&trans        &kp LEFT_SHIFT  &kp LALT   &kp LCTRL  &kp LEFT_GUI  &kp SEMI                                  &kp EXCL   &kp LEFT_BRACE  &kp SQT               &kp DOUBLE_QUOTES      &kp RIGHT_BRACE   &kp QUESTION
+&kp CAPSLOCK  &kp RET         &kp SPACE  &kp TAB    &kp BSPC      &kp COMMA                                 &kp POUND  &kp CARET       &kp UNDERSCORE        &kp EQUAL              &kp DOLLAR        &kp STAR
+&kp TILDE     &kp SLASH       &kp MINUS  &kp PLUS   &kp TILDE     &kp PERIOD  &kp PERCENT    &kp AMPERSAND  &kp PIPE   &kp LESS_THAN   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp GREATER_THAN  &kp BACKSLASH
+                                         &trans     &trans        &trans      &to 0          &kp COLON      &to 2      &trans          &trans
             >;
         };
 
