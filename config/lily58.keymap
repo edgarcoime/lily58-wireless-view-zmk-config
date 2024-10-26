@@ -152,11 +152,11 @@
 
         symbols {
             bindings = <
-&trans        &trans                     &trans     &trans     &trans        &trans                                    &kp SEMI   &kp COMMA       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp GRAVE         &kp AT
-&trans        &super_shift LEFT_SHIFT 0  &kp LALT   &kp LCTRL  &kp LEFT_GUI  &kp SEMI                                  &kp EXCL   &kp LEFT_BRACE  &kp SQT               &kp DOUBLE_QUOTES      &kp RIGHT_BRACE   &kp QUESTION
-&kp CAPSLOCK  &kp RET                    &kp SPACE  &kp TAB    &kp BSPC      &kp COMMA                                 &kp POUND  &kp CARET       &kp UNDERSCORE        &kp EQUAL              &kp DOLLAR        &kp STAR
-&kp TILDE     &kp SLASH                  &kp MINUS  &kp PLUS   &kp TILDE     &kp PERIOD  &kp PERCENT    &kp AMPERSAND  &kp PIPE   &kp LESS_THAN   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp GREATER_THAN  &kp BACKSLASH
-                                                    &trans     &trans        &kp COLON   &to 0          &kp COLON      &to 2      &trans          &trans
+&kp CLCK   &trans                     &trans     &trans     &trans        &trans                                    &kp SEMI   &kp COMMA       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp GRAVE         &kp AT
+&trans     &super_shift LEFT_SHIFT 0  &kp LALT   &kp LCTRL  &kp LEFT_GUI  &kp SEMI                                  &kp EXCL   &kp LEFT_BRACE  &kp SQT               &kp DOUBLE_QUOTES      &kp RIGHT_BRACE   &kp QUESTION
+&trans     &kp RET                    &kp SPACE  &kp TAB    &kp BSPC      &kp COMMA                                 &kp POUND  &kp CARET       &kp UNDERSCORE        &kp EQUAL              &kp DOLLAR        &kp STAR
+&kp TILDE  &kp SLASH                  &kp MINUS  &kp PLUS   &kp TILDE     &kp PERIOD  &kp PERCENT    &kp AMPERSAND  &kp PIPE   &kp LESS_THAN   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp GREATER_THAN  &kp BACKSLASH
+                                                 &trans     &trans        &kp COLON   &to 0          &kp COLON      &to 2      &trans          &trans
             >;
         };
 
