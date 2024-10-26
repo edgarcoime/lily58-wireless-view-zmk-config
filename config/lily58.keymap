@@ -139,6 +139,11 @@
             bindings = <&kp RG(V)>;
             key-positions = <3 4>;
         };
+
+        combo_cmd_tab {
+            bindings = <&kp RG(TAB)>;
+            key-positions = <0 1>;
+        };
     };
 
     keymap {
