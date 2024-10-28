@@ -69,7 +69,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "Tap dance layer 1";
             #binding-cells = <0>;
-            bindings = <&to 1>, <&sl 1>;
+            bindings = <&to 2>, <&sl 2>;
 
             tapping-term-ms = <200>;
         };
@@ -99,7 +99,7 @@
             label = "Tap dance layer 2";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&to 2>, <&sl 2>;
+            bindings = <&to 3>, <&sl 3>;
         };
 
         super_numbers: super_numbers {
@@ -154,10 +154,20 @@
 &kp TAB                        &kp Q            &kp W            &kp E                &kp R               &kp T                                             &kp Y                       &kp U                     &kp I                 &kp O             &kp P                     &kp BSLH
 &mt LEFT_CONTROL ESCAPE        &thm LEFT_GUI A  &thm LEFT_ALT S  &thm LEFT_CONTROL D  &thm LEFT_SHIFT F   &kp G                                             &kp H                       &thm LEFT_SHIFT J         &thm RIGHT_CONTROL K  &thm RIGHT_ALT L  &thm RIGHT_GUI SEMICOLON  &kp SQT
 &kb_settings 5 GRAVE           &kp Z            &kp X            &kp C                &kp V               &kp B               &kp PERCENT    &kp AMPERSAND  &kp N                       &kp M                     &kp COMMA             &kp DOT           &kp FSLH                  &kb_settings 5 EQUAL
-                                                                 &kp QUESTION         &super_numbers 2 0  &super_symbols 1 0  &kp BSPC       &kp SPACE      &super_shift RIGHT_SHIFT 0  &layer_hold 3 UNDERSCORE  &kp MINUS
+                                                                 &kp QUESTION         &super_numbers 3 0  &super_symbols 2 0  &kp BSPC       &kp SPACE      &super_shift RIGHT_SHIFT 0  &layer_hold 4 UNDERSCORE  &kp MINUS
             >;
 
             label = "Base";
+        };
+
+        graphite {
+            bindings = <
+&mt RA(RC(RIGHT_SHIFT)) TILDE  &kp N1           &kp N2           &kp N3               &kp N4             &kp N5                                &kp N6                      &kp N7                    &kp N8                &kp N9            &kp N0            &key_repeat
+&kp TAB                        &kp B            &kp L            &kp D                &kp W              &kp Z                                 &kp SQT                     &kp F                     &kp O                 &kp U             &kp J             &kp SEMI
+&mt LEFT_CONTROL ESCAPE        &thm LEFT_GUI N  &thm LEFT_ALT R  &thm LEFT_CONTROL T  &thm LEFT_SHIFT S  &kp G                                 &kp Y                       &thm LEFT_SHIFT H         &thm RIGHT_CONTROL A  &thm RIGHT_ALT E  &thm RIGHT_GUI I  &kp COMMA
+&kb_settings 5 GRAVE           &kp Q            &kp X            &kp M                &kp C              &kp V   &kp PERCENT    &kp AMPERSAND  &kp K                       &kp P                     &kp DOT               &kp MINUS         &kp FSLH          &kb_settings 5 EQUAL
+                                                                 &kp QUESTION         &mo 3              &mo 2   &kp BSPC       &kp SPACE      &super_shift RIGHT_SHIFT 0  &layer_hold 4 UNDERSCORE  &kp BACKSLASH
+            >;
         };
 
         symbols {
@@ -166,7 +176,7 @@
 &trans     &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT   &kp SEMI                                 &kp EXCL   &kp LEFT_BRACE  &kp SQT               &kp DOUBLE_QUOTES      &kp RIGHT_BRACE   &kp BACKSLASH
 &trans     &kp RET    &kp SPACE  &kp TAB    &kp BSPC    &kp COMMA                                &kp POUND  &kp CARET       &kp UNDERSCORE        &kp EQUAL              &kp DOLLAR        &kp STAR
 &kp TILDE  &kp SLASH  &kp MINUS  &kp PLUS   &kp PERIOD  &kp AT     &kp PERCENT    &kp AMPERSAND  &kp PIPE   &kp LESS_THAN   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp GREATER_THAN  &kp QUESTION
-                                 &trans     &trans      &to 2      &trans         &kp COLON      &to 0      &trans          &trans
+                                 &trans     &trans      &to 3      &trans         &kp COLON      &to 0      &trans          &trans
             >;
         };
 
@@ -176,7 +186,7 @@
 &trans  &kp LGUI  &kp LALT   &kp LCTRL  &kp LSHFT   &kp SEMI                         &kp MINUS       &kp N7  &kp N8  &kp N9  &kp PLUS      &trans
 &trans  &kp RET   &kp SPACE  &kp TAB    &kp BSPC    &kp COMMA                        &kp N0          &kp N4  &kp N5  &kp N6  &kp ASTERISK  &kp EQUAL
 &trans  &trans    &trans     &trans     &kp DELETE  &kp PERIOD  &trans    &trans     &kp DOT         &kp N1  &kp N2  &kp N3  &kp SLASH     &trans
-                             &trans     &trans      &to 3       &trans    &kp ENTER  &to 0           &trans  &trans
+                             &trans     &trans      &to 4       &trans    &kp ENTER  &to 0           &trans  &trans
             >;
         };
 
@@ -190,19 +200,9 @@
             >;
         };
 
-        graphite {
-            bindings = <
-&mt RA(RC(RIGHT_SHIFT)) TILDE  &kp N1           &kp N2           &kp N3               &kp N4             &kp N5                                &kp N6                      &kp N7                    &kp N8                &kp N9            &kp N0            &key_repeat
-&kp TAB                        &kp B            &kp L            &kp D                &kp W              &kp Z                                 &kp SQT                     &kp F                     &kp O                 &kp U             &kp J             &kp SEMI
-&mt LEFT_CONTROL ESCAPE        &thm LEFT_GUI N  &thm LEFT_ALT R  &thm LEFT_CONTROL T  &thm LEFT_SHIFT S  &kp G                                 &kp Y                       &thm LEFT_SHIFT H         &thm RIGHT_CONTROL A  &thm RIGHT_ALT E  &thm RIGHT_GUI I  &kp COMMA
-&kb_settings 5 GRAVE           &kp Q            &kp X            &kp M                &kp C              &kp V   &kp PERCENT    &kp AMPERSAND  &kp K                       &kp P                     &kp DOT               &kp MINUS         &kp FSLH          &kb_settings 5 EQUAL
-                                                                 &kp QUESTION         &mo 2              &mo 1   &kp BSPC       &kp SPACE      &super_shift RIGHT_SHIFT 0  &layer_hold 3 UNDERSCORE  &kp BACKSLASH
-            >;
-        };
-
         keyboard_settings {
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                &to 0       &to 4  &none      &none  &none  &none
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                &to 0       &to 1  &none      &none  &none  &none
 &none       &bt BT_PRV    &bt BT_NXT    &none         &none         &bt BT_CLR_ALL                              &none       &none  &none      &none  &none  &none
 &none       &none         &none         &none         &none         &none                                       &none       &none  &none      &none  &none  &none
 &trans      &none         &none         &none         &none         &none           &none          &none        &none       &none  &none      &none  &none  &trans
