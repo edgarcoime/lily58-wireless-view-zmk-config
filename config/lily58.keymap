@@ -58,7 +58,7 @@
             bindings = <&kp>, <&sticky_capsword>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <350>;
             flavor = "tap-preferred";
             quick-tap-ms = <200>;
             retro-tap;
@@ -190,19 +190,19 @@
             >;
         };
 
-        configs {
+        graphite {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &trans    &trans  &to 0   &trans  &trans
+&mt RA(RC(RIGHT_SHIFT)) TILDE  &kp N1           &kp N2           &kp N3               &kp N4             &kp N5                                &kp N6                      &kp N7                    &kp N8                &kp N9            &kp N0            &key_repeat
+&kp TAB                        &kp B            &kp L            &kp D                &kp W              &kp Z                                 &kp SQT                     &kp F                     &kp O                 &kp U             &kp J             &kp SEMI
+&mt LEFT_CONTROL ESCAPE        &thm LEFT_GUI N  &thm LEFT_ALT R  &thm LEFT_CONTROL T  &thm LEFT_SHIFT S  &kp G                                 &kp Y                       &thm LEFT_SHIFT H         &thm RIGHT_CONTROL A  &thm RIGHT_ALT E  &thm RIGHT_GUI I  &kp COMMA
+&kb_settings 5 GRAVE           &kp Q            &kp X            &kp M                &kp C              &kp V   &kp PERCENT    &kp AMPERSAND  &kp K                       &kp P                     &kp DOT               &kp MINUS         &kp FSLH          &kb_settings 5 EQUAL
+                                                                 &kp AT               &mo 2              &mo 1   &kp BSPC       &kp SPACE      &super_shift RIGHT_SHIFT 0  &layer_hold 3 UNDERSCORE  &kp BACKSLASH
             >;
         };
 
         keyboard_settings {
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                &none       &none  &none      &none  &none  &none
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                &to 0       &to 4  &none      &none  &none  &none
 &none       &bt BT_PRV    &bt BT_NXT    &none         &none         &bt BT_CLR_ALL                              &none       &none  &none      &none  &none  &none
 &none       &none         &none         &none         &none         &none                                       &none       &none  &none      &none  &none  &none
 &trans      &none         &none         &none         &none         &none           &none          &none        &none       &none  &none      &none  &none  &trans
