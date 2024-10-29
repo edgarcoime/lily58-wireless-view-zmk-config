@@ -58,7 +58,7 @@
             bindings = <&kp>, <&sticky_capsword>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <350>;
+            tapping-term-ms = <400>;
             flavor = "tap-preferred";
             quick-tap-ms = <200>;
             retro-tap;
@@ -139,9 +139,24 @@
             key-positions = <3 4>;
         };
 
-        combo_cmd_tab {
-            bindings = <&kp RG(TAB)>;
+        combo_cmd_undo {
+            bindings = <&kp RG(Z)>;
             key-positions = <0 1>;
+        };
+
+        combo_cut {
+            bindings = <&kp RG(X)>;
+            key-positions = <1 2>;
+        };
+
+        combo_c_u {
+            bindings = <&kp RC(U)>;
+            key-positions = <7 8>;
+        };
+
+        combo_c_d {
+            bindings = <&kp RC(D)>;
+            key-positions = <8 9>;
         };
     };
 
