@@ -171,6 +171,8 @@
 &kb_settings 5 GRAVE           &kp Q            &kp X            &kp M                &kp C               &kp V               &kp PERCENT    &kp AMPERSAND  &kp K                       &kp P                     &kp DOT               &kp MINUS         &kp FSLH          &kb_settings 5 EQUAL
                                                                  &kp QUESTION         &super_numbers 3 0  &super_symbols 2 0  &kp BSPC       &kp SPACE      &super_shift RIGHT_SHIFT 0  &layer_hold 4 UNDERSCORE  &kp BACKSLASH
             >;
+
+            label = "GRAPH";
         };
 
         qwerty {
@@ -181,6 +183,8 @@
 &kb_settings 5 GRAVE           &kp Z            &kp X            &kp C                &kp V               &kp B               &kp PERCENT    &kp AMPERSAND  &kp N                       &kp M                     &kp COMMA             &kp DOT           &kp FSLH                  &kb_settings 5 EQUAL
                                                                  &kp QUESTION         &super_numbers 3 0  &super_symbols 2 0  &kp BSPC       &kp SPACE      &super_shift RIGHT_SHIFT 0  &layer_hold 4 UNDERSCORE  &kp MINUS
             >;
+
+            label = "QWERTY";
         };
 
         symbols {
@@ -215,7 +219,7 @@
 
         keyboard_settings {
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                &to 1       &to 0  &none      &none  &none  &none
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                &to 0       &to 1  &none      &none  &none  &none
 &none       &bt BT_PRV    &bt BT_NXT    &none         &none         &bt BT_CLR_ALL                              &none       &none  &none      &none  &none  &none
 &none       &none         &none         &none         &none         &none                                       &none       &none  &none      &none  &none  &none
 &trans      &none         &none         &none         &none         &none           &none          &none        &none       &none  &none      &none  &none  &trans
