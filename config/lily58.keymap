@@ -158,6 +158,12 @@
             bindings = <&kp RC(D)>;
             key-positions = <8 7>;
         };
+
+        combo_ctrl_a {
+            bindings = <&kp LC(A)>;
+            key-positions = <24 25>;
+            layers = <0 1>;
+        };
     };
 
     keymap {
