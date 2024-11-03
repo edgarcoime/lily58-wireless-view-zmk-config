@@ -65,9 +65,9 @@
             hold-while-undecided-linger;
         };
 
-        td_layer1: td_layer1 {
+        td_symbols: td_symbols {
             compatible = "zmk,behavior-tap-dance";
-            label = "Tap dance layer 1";
+            label = "Tap dance symbols";
             #binding-cells = <0>;
             bindings = <&to 2>, <&sl 2>;
 
@@ -77,7 +77,7 @@
         super_symbols: super_symbols {
             compatible = "zmk,behavior-hold-tap";
             label = "SUPER_SYMBOLS";
-            bindings = <&mo>, <&td_layer1>;
+            bindings = <&mo>, <&td_symbols>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -96,7 +96,7 @@
 
         td_numbers: td_numbers {
             compatible = "zmk,behavior-tap-dance";
-            label = "Tap dance layer 2";
+            label = "Tap dance numbers";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&to 3>, <&sl 3>;
@@ -195,12 +195,14 @@
 
         symbols {
             bindings = <
-&kp CLCK   &trans     &trans     &trans     &trans      &trans                                   &trans     &kp COMMA       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp GRAVE         &trans
-&trans     &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT   &kp SEMI                                 &kp EXCL   &kp LEFT_BRACE  &kp SQT               &kp DOUBLE_QUOTES      &kp RIGHT_BRACE   &kp BACKSLASH
-&trans     &kp RET    &kp SPACE  &kp TAB    &kp BSPC    &kp COMMA                                &kp POUND  &kp CARET       &kp UNDERSCORE        &kp EQUAL              &kp DOLLAR        &kp STAR
-&kp TILDE  &kp SLASH  &kp MINUS  &kp PLUS   &kp PERIOD  &kp AT     &kp PERCENT    &kp AMPERSAND  &kp PIPE   &kp LESS_THAN   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp GREATER_THAN  &kp QUESTION
-                                 &trans     &trans      &to 3      &trans         &kp COLON      &to 0      &trans          &trans
+&trans        &trans     &trans     &trans     &trans      &trans                                   &trans     &kp COMMA       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp GRAVE         &trans
+&trans        &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT   &kp SEMI                                 &kp EXCL   &kp LEFT_BRACE  &kp SQT               &kp DOUBLE_QUOTES      &kp RIGHT_BRACE   &kp BACKSLASH
+&kp CAPSLOCK  &kp RET    &kp SPACE  &kp TAB    &kp BSPC    &kp COMMA                                &kp POUND  &kp CARET       &kp UNDERSCORE        &kp EQUAL              &kp DOLLAR        &kp STAR
+&kp TILDE     &kp SLASH  &kp MINUS  &kp PLUS   &kp PERIOD  &kp AT     &kp PERCENT    &kp AMPERSAND  &kp PIPE   &kp LESS_THAN   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp GREATER_THAN  &kp QUESTION
+                                    &trans     &trans      &to 3      &trans         &kp COLON      &to 0      &trans          &trans
             >;
+
+            label = "SYMBOLS";
         };
 
         numbers {
@@ -211,16 +213,20 @@
 &trans  &trans    &trans     &trans     &kp DELETE  &kp PERIOD  &trans    &trans  &kp DOT         &kp N1  &kp N2  &kp N3  &kp SLASH     &trans
                              &trans     &trans      &to 4       &trans    &kp N0  &to 0           &trans  &trans
             >;
+
+            label = "NUMBERS";
         };
 
         functions {
             bindings = <
 &kp F1  &kp F2    &kp F3    &kp F4     &kp F5     &kp F6                    &kp F7      &kp F8         &kp F9        &kp F10    &kp F11    &kp F12
-&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans                    &kp INSERT  &trans         &trans        &trans     &trans     &kp PRINTSCREEN
+&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans                    &kp HOME    &kp PAGE_DOWN  &kp PAGE_UP   &kp END    &kp INS    &kp PRINTSCREEN
 &trans  &trans    &trans    &trans     &trans     &trans                    &kp LEFT    &kp DOWN       &kp UP_ARROW  &kp RIGHT  &kp ENTER  &kp C_PAUSE
-&trans  &trans    &trans    &trans     &trans     &trans  &trans    &trans  &kp HOME    &kp PAGE_DOWN  &kp PAGE_UP   &kp END    &trans     &kp SCROLLLOCK
+&trans  &trans    &trans    &trans     &trans     &trans  &trans    &trans  &kp DELETE  &kp BACKSPACE  &kp TAB       &kp SPACE  &kp ENTER  &kp SCROLLLOCK
                             &trans     &trans     &trans  &trans    &trans  &to 0       &trans         &trans
             >;
+
+            label = "FUNCTIONS";
         };
 
         keyboard_settings {
@@ -231,6 +237,8 @@
 &trans      &none         &none         &none         &none         &none           &none          &none        &none       &none              &none       &none            &none  &trans
                                         &soft_off     &none         &sys_reset      &bootloader    &bootloader  &sys_reset  &none              &soft_off
             >;
+
+            label = "KB_SETT";
         };
     };
 };
